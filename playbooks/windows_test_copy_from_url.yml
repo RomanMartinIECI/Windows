@@ -1,0 +1,4 @@
+- name: Download SQL Server installation package
+    win_get_url:
+    url: http://10.228.136.97/windows/test_file.zip
+    dest: C:\test_file.zip
