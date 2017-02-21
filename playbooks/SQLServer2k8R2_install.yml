@@ -1,0 +1,11 @@
+---
+# This playbook installs and enables IIS on Windows hosts
+
+- name: SQL Server 2008 R2 Installation
+  hosts: all
+  gather_facts: false
+  tasks:
+- name: Download SQL Server installation package
+    win_get_url:
+    url: http://10.228.136.97/windows/test_file.zip
+    dest: C:\test_file.zip
