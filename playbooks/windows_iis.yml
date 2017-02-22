@@ -7,10 +7,9 @@
   gather_facts: false
   tasks:
     - name: Create a file
-      hosts: all
       win_file:
-      path: C:\{{ ansible_env.password }}.conf
-      state: file
+        path: C:\{{ ansible_env.password }}.conf
+        state: file
 
     - name: Install IIS
       win_feature:
