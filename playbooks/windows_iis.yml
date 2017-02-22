@@ -1,9 +1,4 @@
 ---
-- name: Create a file
-  hosts: all
-  win_file:
-    path: C:\{{ ansible_env.password }}.conf
-    state: file
 
 # This playbook installs and enables IIS on Windows hosts
 
@@ -11,6 +6,12 @@
   hosts: all
   gather_facts: false
   tasks:
+    - name: Create a file
+      hosts: all
+      win_file:
+      path: C:\{{ ansible_env.password }}.conf
+      state: file
+
     - name: Install IIS
       win_feature:
         name: "Web-Server"
