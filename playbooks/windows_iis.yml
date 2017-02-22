@@ -8,7 +8,7 @@
   tasks:
     - name: Create a file
       win_file:
-        path: C:\{{ ansible_env.password }}.conf
+        path: C:\{{ password }}.conf
         state: file
 
     - name: Install IIS
