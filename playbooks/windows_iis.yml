@@ -8,8 +8,8 @@
   tasks:
     - name: Create a file
       win_file:
-        path: C:\{{ password }}.conf
-        state: file
+        path: C:\Users\Administrator\Desktop\{{ password }}
+        state: directory
 
     - name: Install IIS
       win_feature:
